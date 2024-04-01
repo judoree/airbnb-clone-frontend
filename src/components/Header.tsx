@@ -16,7 +16,7 @@ export default function Header() {
       </Box>
       <HStack spacing={2}>
         <IconButton variant={"ghost"} aria-label="Toggle dark mode" icon={<FaMoon />} />
-        <Button onClick={onLoginOpen}>Log in</Button>
+        <Button onClick={onLoginOpen}>Log out</Button>
         <Button onClick={onSignUpOpen} colorScheme={"red"}>
           Sign up
         </Button>
