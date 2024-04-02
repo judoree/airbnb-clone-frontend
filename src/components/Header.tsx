@@ -1,5 +1,5 @@
 import { FaAirbnb, FaMoon, FaSun } from "react-icons/fa";
-import { Box, Button, HStack, IconButton, useColorMode, useDisclosure, LightMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, HStack, Stack, IconButton, useColorMode, useDisclosure, LightMode, useColorModeValue } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import LoginModal from "./LoginModal";
 import SignUpModal from "./SignUpModal";
@@ -12,7 +12,21 @@ export default function Header() {
   const Icon = useColorModeValue(FaMoon, FaSun);
 
   return (
-    <HStack justifyContent={"space-between"} py={5} px={40} borderBottomWidth={1}>
+    <Stack
+      justifyContent={"space-between"}
+      py={5}
+      alignItems="center"
+      px={40}
+      direction={{
+        sm: "column",
+        md: "row",
+      }}
+      spacing={{
+        md: 4,
+        sm: 0,
+      }}
+      borderBottomWidth={1}
+    >
       <Box color={logoColor}>
         <Link to={"/"}>
           <FaAirbnb size={"48"} />
@@ -29,6 +43,6 @@ export default function Header() {
       </HStack>
       <LoginModal isOpen={isLoginOpen} onClose={onLoginClose} />
       <SignUpModal isOpen={isSignUpOpen} onClose={onSignUpClose} />
-    </HStack>
+    </Stack>
   );
 }
