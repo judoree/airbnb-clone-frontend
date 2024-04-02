@@ -1,5 +1,5 @@
 import { FaStar, FaRegHeart } from "react-icons/fa";
-import { Box, Grid, Heading, HStack, Image, Text, VStack, Button } from "@chakra-ui/react";
+import { Box, Grid, Heading, HStack, Image, Text, VStack, Button, Skeleton, SkeletonText } from "@chakra-ui/react";
 import Room from "../components/Room";
 
 export default function Home() {
@@ -20,9 +20,12 @@ export default function Home() {
         "2xl": "repeat(5 , 1fr)",
       }}
     >
-      {[1, 2, 3, 4, 2, 3, 2, 32, 31, 23, 1, 23, 12, 3, 12, 31, 23].map((index) => (
-        <Room key={index} />
-      ))}
+      <Box>
+        <Skeleton height={280} rounded="2xl" mb={8} />
+        <SkeletonText w="50%" noOfLines={2} mb={7} />
+        <SkeletonText w="20%" noOfLines={1} />
+      </Box>
+      <Room />
     </Grid>
   );
 }
