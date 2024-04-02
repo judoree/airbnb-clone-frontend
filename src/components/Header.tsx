@@ -12,7 +12,7 @@ export default function Header() {
   const Icon = useColorModeValue(FaMoon, FaSun);
 
   return (
-    <HStack justifyContent={"space-between"} py={5} px={10} borderBottomWidth={1}>
+    <HStack justifyContent={"space-between"} py={5} px={40} borderBottomWidth={1}>
       <Box color={logoColor}>
         <Link to={"/"}>
           <FaAirbnb size={"48"} />
