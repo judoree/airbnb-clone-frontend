@@ -5,6 +5,7 @@ import Room from "../components/Room";
 import { useEffect, useState } from "react";
 import RoomSkeleton from "../components/RoomSkeleton";
 import { getRooms } from "../api";
+import { Link } from "react-router-dom";
 
 interface IPhoto {
   pk: string;
@@ -56,6 +57,7 @@ export default function Home() {
           <RoomSkeleton />
         </>
       ) : null}
+
       {data?.map((room) => (
         <Room imageUrl={room.photos[0].file} name={room.name} rating={room.rating} city={room.city} country={room.country} price={room.price} />
       ))}
