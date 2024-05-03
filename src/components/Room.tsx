@@ -11,10 +11,11 @@ interface IRoomProps {
   price: number;
   pk: number;
 }
-
+// 타입 스크립입 쓰므로 타입 알려줘야함
 export default function Room({ pk, imageUrl, name, rating, city, country, price }: IRoomProps) {
   const gray = useColorModeValue("gray.600", "gray.300");
   return (
+    // Link 만드는 code
     <Link to={`/rooms/${pk}`}>
       <VStack alignItems={"flex-start"}>
         <Box position="relative" overflow={"hidden"} mb={3} rounded="2xl">
