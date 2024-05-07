@@ -32,18 +32,21 @@ export default function Header() {
   const Icon = useColorModeValue(FaMoon, FaSun);
   const toast = useToast();
   const onLogOut = async () => {
-    // const data = await logOut();
-    const tostId = toast({
-      title: "Login out ",
-      description: "Bye Bye",
+    const toastId = toast({
+      title: "Login out...",
+      description: "Sad to see you go...",
       status: "loading",
       position: "bottom-right",
     });
-    toast.update(tostId, {
-      status: "success",
-      title: "로그 아웃 완료!",
-      description: "Bye Bye",
-    });
+    const data = await logOut();
+    console.log(data);
+    setTimeout(() => {
+      toast.update(toastId, {
+        status: "success",
+        title: "Done!",
+        description: "See you later!",
+      });
+    }, 5000);
   };
 
   return (
