@@ -14,10 +14,9 @@ export default function SocialLogin() {
       <VStack>
         <Button
           as="a"
-          href="https://github.com/login/oauth/authorize?client_id=Ov23liFU1oi07kKpNMks&scope=read:user,user:email"
+          href="https://github.com/login/oauth/authorize?client_id=Ov23liYKqAM0abtXRi7z&scope=read:user,user:email"
           w={"100%"}
           leftIcon={<FaGithub />}
-          colorScheme={"Github"}
         >
           Continue with Github
         </Button>

@@ -18,9 +18,9 @@ export default function GithubConfirm() {
   }, []);
   return (
     <VStack justifyContent={"center"} mt={40}>
-      <Heading>Processing log in</Heading>
-      <Text>Dont go anywhere</Text>
-      <Spinner size="xl" />
+      <Heading>Processing log in...</Heading>
+      <Text>Don't go anywhere.</Text>
+      <Spinner size="lg" />
     </VStack>
   );
 }
